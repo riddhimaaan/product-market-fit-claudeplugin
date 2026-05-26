@@ -12,7 +12,7 @@ Full product-market fit analysis in one command. Takes your product and target a
 
 ```
 claude plugin marketplace add riddhimaaan/product-market-fit-claudeplugin
-claude plugin install product-market-fit@product-market-fit
+claude plugin install product-market-fit@product-market-fit-claudeplugin
 ```
 
 ### Manual install — clone and run the install script

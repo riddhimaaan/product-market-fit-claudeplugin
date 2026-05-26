@@ -23,7 +23,7 @@ install.ps1                              PowerShell install script (Windows)
 
 ```
 claude plugin marketplace add riddhimaaan/product-market-fit-claudeplugin
-claude plugin install product-market-fit@product-market-fit
+claude plugin install product-market-fit@product-market-fit-claudeplugin
 ```
 
 Or manually:
