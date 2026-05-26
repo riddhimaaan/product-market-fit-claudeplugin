@@ -2,7 +2,7 @@
 name: product-market-fit
 version: "1.0.0"
 description: "Full product-market fit analysis. Takes your product and target audience, runs a complete ICP psychographics analysis, builds a structured offer document, then synthesizes a PMF report mapping fit across four dimensions. Outputs three markdown files: ICP doc, Offer doc, and PMF Report. Trigger on: 'product market fit', 'PMF analysis', 'does my product fit the market', 'validate my offer', 'ICP and offer', 'who should I sell to and how'."
-argument-hint: '/product-market-fit'
+argument-hint: 'cold email course for B2B SaaS founders, CRM software for sales ops teams at Series A startups'
 allowed-tools: Read, Write, AskUserQuestion
 user-invocable: true
 ---

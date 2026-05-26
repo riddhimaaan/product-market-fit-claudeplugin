@@ -11,32 +11,36 @@ Full product-market fit analysis in one command. Takes your product and target a
 ### Claude Code (recommended)
 
 ```
-claude plugin marketplace add acquisitionx/product-market-fit
+claude plugin marketplace add riddhimaaan/product-market-fit-claudeplugin
 claude plugin install product-market-fit@product-market-fit
 ```
 
-### Manual install
+### Manual install — clone and run the install script
 
-**macOS / Linux:**
 ```bash
-bash install.sh
-```
+# Clone the repo
+git clone https://github.com/riddhimaaan/product-market-fit-claudeplugin.git
+cd product-market-fit-claudeplugin
 
-**Windows:**
-```powershell
+# macOS / Linux
+bash install.sh
+
+# Windows (PowerShell)
 .\install.ps1
 ```
 
-Or copy directly:
+### Manual install — copy directly
 
 ```bash
 # macOS / Linux
-cp -r . ~/.claude/skills/product-market-fit
+git clone https://github.com/riddhimaaan/product-market-fit-claudeplugin.git
+cp -r product-market-fit/skills/product-market-fit/. ~/.claude/skills/product-market-fit
 ```
 
 ```powershell
 # Windows (PowerShell)
-Copy-Item -Recurse "." "$env:USERPROFILE\.claude\skills\product-market-fit"
+git clone https://github.com/riddhimaaan/product-market-fit-claudeplugin.git
+Copy-Item -Recurse "product-market-fit\skills\product-market-fit\*" "$env:USERPROFILE\.claude\skills\product-market-fit"
 ```
 
 After installing, restart Claude Code or run `/reload-plugins`.
@@ -100,6 +104,12 @@ Phase 3 scores fit across four dimensions:
 - Claude Code
 - No API keys
 - No external dependencies
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE)
 
 ---
 
