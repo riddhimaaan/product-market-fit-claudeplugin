@@ -1,0 +1,8 @@
+{
+  "name": "product-market-fit",
+  "version": "1.0.0",
+  "description": "Full product-market fit analysis. Takes your product and target audience, runs ICP psychographics + offer clarity in sequence, then synthesizes a PMF report across four dimensions. Outputs three markdown documents.",
+  "author": {
+    "name": "Riddhiman Bania"
+  }
+}

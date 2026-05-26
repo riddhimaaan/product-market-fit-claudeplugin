@@ -1,0 +1,14 @@
+{
+  "name": "product-market-fit",
+  "owner": {
+    "name": "Riddhiman Bania"
+  },
+  "plugins": [
+    {
+      "name": "product-market-fit",
+      "displayName": "Product Market Fit",
+      "source": "./",
+      "description": "Full product-market fit analysis. Takes your product and target audience, runs ICP psychographics + offer clarity in sequence, then synthesizes a PMF report across four dimensions. Outputs three markdown documents."
+    }
+  ]
+}
