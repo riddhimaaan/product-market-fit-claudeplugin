@@ -270,6 +270,7 @@ The outcome must contain a specific number, a specific deliverable with a specif
 
 ### Formatting rules — enforce before writing a single word
 
+- **Simple language first:** Write like you are explaining to a smart 12-year-old. Everyday words only. If a simpler word exists, use it — 'use' not 'utilize', 'show' not 'demonstrate', 'help' not 'facilitate', 'find' not 'identify'. Every sentence should be easy to read aloud in one breath.
 - Maximum 20 words per sentence. Split anything longer.
 - Maximum 3 sentences per paragraph. One idea per paragraph. Use bullets if more to say.
 - One fact per bullet. Maximum 12 words per bullet.

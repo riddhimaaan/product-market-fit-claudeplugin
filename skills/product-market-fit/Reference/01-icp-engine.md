@@ -5,13 +5,13 @@ The orchestrator has already collected the product description, target audience,
 
 ---
 
-## Two rules for every line of output
+## Three rules for every line of output
 
 **Rule 1 — Use simple, real words only**
 
 Do not use: leverage, optimize, align, synergy, framework, facilitate, streamline, empower.
 
-Write like a real person talking to a friend. Use the exact words your ICP would use when they talk about their work, their problems, and what they want. If they would say "I'm drowning in emails," write that — not "they experience communication overload."
+Write like a real person talking to a friend. Write like you are explaining it to a smart 12-year-old. Use everyday words. Short sentences. If a simpler word exists, use it — 'use' not 'utilize', 'show' not 'demonstrate', 'find' not 'identify'. Use the exact words your ICP would use when they talk about their work, their problems, and what they want. If they would say "I'm drowning in emails," write that — not "they experience communication overload."
 
 **Rule 2 — No generic output. Specific to this exact person.**
 

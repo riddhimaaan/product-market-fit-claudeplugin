@@ -1,21 +1,23 @@
 ---
 name: product-market-fit
-version: "1.0.0"
-description: "Full product-market fit analysis. Takes your product and target audience, runs a complete ICP psychographics analysis, builds a structured offer document, then synthesizes a PMF report mapping fit across four dimensions. Outputs three markdown files: ICP doc, Offer doc, and PMF Report. Trigger on: 'product market fit', 'PMF analysis', 'does my product fit the market', 'validate my offer', 'ICP and offer', 'who should I sell to and how'."
+version: "1.1.0"
+description: "Scores your offer out of 10. Runs a full ICP and offer analysis internally, then gives you a single score. Asks at the end if you want the offer document or the full PMF report. Trigger on: 'product market fit', 'PMF analysis', 'does my product fit the market', 'validate my offer', 'ICP and offer', 'who should I sell to and how', 'score my offer'."
 argument-hint: 'cold email course for B2B SaaS founders, CRM software for sales ops teams at Series A startups'
-allowed-tools: Read, Write, AskUserQuestion
+allowed-tools: Read, AskUserQuestion
 user-invocable: true
 ---
 
 # Product-Market Fit Skill
 
-Takes one product and one target audience. Produces three documents.
+Takes one product and one target audience. Runs three phases internally. Delivers one score.
 
-1. **ICP Psychographics Document** — who your buyer is, what they struggle with, what they want, what drives them underneath the surface
-2. **Offer Clarity Document** — tiered offer stack, objection map, outcome sentence, and positioning
-3. **PMF Report** — four-dimension fit mapping, gap analysis, prioritized fixes, and a plain-English PMF verdict
+1. **Phase 1 — ICP Psychographics** — who your buyer is, what they struggle with, what they want, what drives them underneath the surface
+2. **Phase 2 — Offer Clarity** — tiered offer stack, objection map, outcome sentence, and positioning
+3. **Phase 3 — PMF Scoring** — four-dimension fit check, scored out of 10
 
-Execute all three phases in order. Do not skip. Do not deliver partial output.
+No files are written unless the user asks. The default output is the score. Then ask if they want the offer document or the PMF report.
+
+Execute all three phases in order. Do not skip. Do not deliver partial output mid-phase.
 
 ---
 
@@ -42,10 +44,7 @@ Wait for the user's answers. Do not proceed without at minimum questions 1 and 2
 
 Read `Reference/01-icp-engine.md` completely. Execute every section in order using the intake answers as input. Do not ask for information the intake already provided.
 
-When Phase 1 is complete:
-- Use the Write tool to save the output as `ICP-[JobTitle]-[Industry].md` in the current working directory
-- Use the exact job title and industry from the intake for the filename (no spaces — use hyphens)
-- Tell the user: "Phase 1 complete. ICP document saved as `ICP-[filename].md`."
+When Phase 1 is complete, keep the ICP content in context. Do not write any file. Continue immediately to Phase 2.
 
 ---
 
@@ -68,41 +67,50 @@ Construct this four-section document internally from the mapping above. Then rea
 
 **Skip the POST-DELIVERY Mentor Conversation section** at the end of the execution engine. The skill proceeds to Phase 3 instead.
 
-When Phase 2 is complete:
-- Derive a short product name from the intake (2–4 words, hyphenated, no spaces)
-- Use the Write tool to save the output as `Offer-[ProductName].md` in the current working directory
-- Tell the user: "Phase 2 complete. Offer document saved as `Offer-[filename].md`."
+When Phase 2 is complete, keep the Offer content in context. Do not write any file. Continue immediately to Phase 3.
 
 ---
 
-## Step 4 — Phase 3: PMF Synthesis
+## Step 4 — Phase 3: PMF Scoring
 
-Read `Reference/03-pmf-synthesis.md` completely. Execute it using the full Phase 1 and Phase 2 outputs as inputs.
+Read `Reference/03-pmf-synthesis.md` completely. Run the four-dimension scoring using Phase 1 and Phase 2 outputs. Do not produce the full PMF Report document yet — calculate the score only.
 
-When Phase 3 is complete:
-- Use the Write tool to save the output as `PMF-Report-[ProductName].md` in the current working directory
-- Use the same product name slug from Phase 2
-- Tell the user: "Phase 3 complete. PMF Report saved as `PMF-Report-[filename].md`."
+- Count the number of Strong Fit ratings (0–4)
+- Multiply by 2.5 to get the score out of 10
+- Note the strongest dimension and the most important gap
+
+Do not write any file.
 
 ---
 
 ## Final Message
 
-After all three files are saved, send this summary:
+After all three phases complete, send this to the user:
 
-> "All three documents are ready.
+> **Offer Score: [X]/10**
 >
-> - `ICP-[filename].md` — who your buyer is and what drives them
-> - `Offer-[filename].md` — your tiered offer stack and positioning
-> - `PMF-Report-[filename].md` — where your offer fits the market and what to fix first
+> [One sentence naming the strongest dimension. One sentence naming the most important gap.]
 >
-> Your PMF Score is [X]/4. [One sentence on the strongest dimension and the most important gap.]"
+> Want me to show you the offer document or the full PMF report?
+
+---
+
+## Step 5 — On User Response
+
+**If the user asks for the offer document:**
+Print the full Phase 2 Offer Clarity Document inline in the response. Do not write any file.
+
+**If the user asks for the PMF report:**
+Print the full Phase 3 PMF Report inline in the response. Do not write any file.
 
 ---
 
 ## Output Style Rules
 
-Apply to every word in all three documents. No exceptions.
+Apply to every word in all output. No exceptions.
+
+**Simple language — always:**
+Write like you are explaining to a smart 12-year-old. Use short sentences. Use everyday words. If a shorter or simpler word exists, use it. 'Use' not 'utilize'. 'Show' not 'demonstrate'. 'Help' not 'facilitate'. 'Find' not 'identify'. Every sentence should be easy to read aloud in one breath.
 
 **Viking English — the core rule**
 Every sentence states the actual thing. Not a category. Not a description of a feeling. The actual fact.

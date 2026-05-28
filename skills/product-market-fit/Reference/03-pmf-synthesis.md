@@ -1,9 +1,11 @@
 # PMF Synthesis Engine
 ## Product-Market Fit Skill — Phase 3
 
-This phase maps the ICP Psychographics Document against the Offer Clarity Document across four dimensions. It does not generate new analysis from scratch — it compares specific facts from both documents and identifies where they align or diverge.
+This phase maps the ICP Psychographics Document against the Offer Clarity Document across four dimensions. It does not generate new analysis from scratch — it compares specific facts from both documents and finds where they match or don't.
 
 Input: The complete Phase 1 (ICP) and Phase 2 (Offer) outputs from this session.
+
+**Language rule:** Write like you are explaining to a smart 12-year-old. Use short sentences. Use everyday words. If a simpler word exists, use it — 'use' not 'utilize', 'show' not 'demonstrate', 'help' not 'facilitate'. Every sentence should be easy to read aloud in one breath.
 
 ---
 
@@ -97,14 +99,14 @@ Run every dimension. Do not skip any.
 
 After running all four dimensions, calculate the score:
 
-Count the number of Strong Fit ratings.
+Count the number of Strong Fit ratings. Multiply by 2.5 to get the score out of 10.
 
 | Score | Label | What It Means |
 |-------|-------|---------------|
-| 4/4 | Ready | The offer speaks to the right people about the right problem with the right promise. Prioritize distribution and getting it in front of buyers. |
-| 3/4 | Mostly ready | One meaningful gap. Fix it before scaling any paid distribution. The offer will convert but will lose buyers at one predictable point. |
-| 2/4 | Needs work | Two gaps means buyers self-select out at two different failure points. Fix the most damaging gap first — do not try to fix both simultaneously. |
-| 1/4 or 0/4 | Misaligned | Do not invest in distribution yet. The offer is solving for something the ICP doesn't want, or is positioned for someone other than the real buyer. Revisit the problem framing. |
+| 10/10 | Ready | The offer speaks to the right people about the right problem with the right promise. Focus on getting it in front of buyers. |
+| 7.5/10 | Mostly ready | One real gap. Fix it before you spend money on ads or cold outreach. The offer will work but you'll lose buyers at one clear point. |
+| 5/10 | Needs work | Two gaps means buyers drop off at two different moments. Fix the worst gap first. Don't try to fix both at the same time. |
+| 2.5/10 or 0/10 | Misaligned | Do not spend money on distribution yet. The offer is solving for something the ICP doesn't want, or is aimed at the wrong buyer. Go back to the problem framing. |
 
 ---
 
@@ -151,13 +153,13 @@ Write it in this order:
 
 ## PMF Report — Document Structure
 
-Assemble the full report in this exact structure. Deliver as a complete document — the orchestrator saves it as a file.
+Assemble the full report in this exact structure. Print it inline in the response — do not save to a file.
 
 ```
 # PMF Report
 ## [Product Name] x [Target Audience — job title at company type]
 
-**PMF Score: [X]/4 — [Ready / Mostly Ready / Needs Work / Misaligned]**
+**PMF Score: [X]/10 — [Ready / Mostly Ready / Needs Work / Misaligned]**
 
 ---
 
